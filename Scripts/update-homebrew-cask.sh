@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Update the hee-button Cask in kujiy/homebrew-tap with a new version + sha256,
 # then commit and push. Intended to run in CI (see .github/workflows/release.yml).
-# Requires GH_TOKEN in the environment (from secrets.GH_TOKEN_HOMEBREW_TAP).
+# Requires GH_TOKEN in the environment (from secrets.HOMEBREW_TAP_TOKEN).
 set -euo pipefail
 
 VERSION="$1"

@@ -80,6 +80,6 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-The release workflow requires a repository secret `GH_TOKEN_HOMEBREW_TAP`
+The release workflow requires a repository secret `HOMEBREW_TAP_TOKEN`
 (a PAT with `repo` scope) so CI can push the updated Cask to
 [kujiy/homebrew-tap](https://github.com/kujiy/homebrew-tap).

@@ -32,4 +32,4 @@ jobs:
       - name: Update Homebrew Cask
         run: bash Scripts/update-homebrew-cask.sh "${{ steps.v.outputs.version }}" "${{ steps.zip.outputs.sha256 }}"
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_HOMEBREW_TAP }}
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
