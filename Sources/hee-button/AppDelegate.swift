@@ -12,7 +12,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private static let volumeKey = "volumeLevel" // 1...10
 
     private var iconChoice: IconChoice = .simpleBlue
-    private var volumeLevel = 10 // 1...10, applied as volume = level / 10
+    private var volumeLevel = 5 // 1...10 (default 50%), applied as volume = level / 10
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         restorePreferences()
