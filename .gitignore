@@ -1,0 +1,24 @@
+# SwiftPM
+.build/
+Package.resolved
+
+# Build artifacts
+*.app
+*.zip
+
+# macOS
+.DS_Store
+
+# Source input originals (carry C2PA / where-from metadata).
+# The build ships the cleaned copies under Sources/hee-button/Resources/.
+/button.png
+/he-.mp3
+
+# Internal implementation planning (kept local, not published)
+docs/
+
+# IDE (auto-generated, developer-specific)
+.vscode/
+
+# Other local icon variants
+/he-simple.png
