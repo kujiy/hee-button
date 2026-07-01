@@ -3,7 +3,11 @@
 A tiny macOS menu bar app. Click the menu bar icon to play a sound (`he-.mp3`). That's it.
 
 - **Left click** — play the sound (restarts from the top on each click)
-- **Right click** — context menu with a single **Quit** item
+- **Right click** — context menu:
+  - **Icon** — pick the menu-bar icon (Button / Simple / Simple Blue)
+  - **Volume** — set playback volume in 10 steps (10%–100%); selecting a level plays a preview
+  - **Quit**
+- Icon and volume choices persist across launches (`UserDefaults`)
 - Lives only in the menu bar (no Dock icon)
 
 ## Install
@@ -48,9 +52,10 @@ into the bundle: `bash Scripts/build-app.sh 1.2.3`.
 Package.swift                  SwiftPM executable target + bundled resources
 Sources/hee-button/
   main.swift                   NSApplication entry point (accessory / menu-bar only)
-  AppDelegate.swift            NSStatusItem + left/right click handling
-  AudioPlayer.swift            AVAudioPlayer wrapper (restart-from-top playback)
-  Resources/                   button.png (22px), button@2x.png (44px), he-.mp3
+  AppDelegate.swift            NSStatusItem + click handling, icon/volume menu, prefs
+  AudioPlayer.swift            AVAudioPlayer wrapper (restart-from-top, volume)
+  IconChoice.swift             Selectable menu-bar icons
+  Resources/                   icon PNGs (22px + @2x) for each choice, he-.mp3
 Info.plist.template            LSUIElement + CFBundle keys (__VERSION__ placeholder)
 Scripts/build-app.sh           Assemble HeeButton.app
 Scripts/update-homebrew-cask.sh  CI: bump version/sha256 in kujiy/homebrew-tap
