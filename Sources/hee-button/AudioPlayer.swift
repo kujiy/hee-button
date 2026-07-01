@@ -10,7 +10,7 @@ final class AudioPlayer {
     }
 
     init() {
-        guard let url = Bundle.module.url(forResource: "he-", withExtension: "mp3") else {
+        guard let url = Bundle.main.url(forResource: "he-", withExtension: "mp3") else {
             NSLog("hee-button: he-.mp3 not found in bundle")
             return
         }

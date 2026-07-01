@@ -48,13 +48,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     /// bitmaps so it stays crisp on Retina. Rendered at 18pt to leave the
     /// standard menu-bar margin.
     private static func loadIcon(named name: String) -> NSImage? {
-        guard let url1x = Bundle.module.url(forResource: name, withExtension: "png"),
+        guard let url1x = Bundle.main.url(forResource: name, withExtension: "png"),
               let rep1x = NSImageRep(contentsOf: url1x) else {
             return nil
         }
         let image = NSImage(size: NSSize(width: 18, height: 18))
         image.addRepresentation(rep1x)
-        if let url2x = Bundle.module.url(forResource: "\(name)@2x", withExtension: "png"),
+        if let url2x = Bundle.main.url(forResource: "\(name)@2x", withExtension: "png"),
            let rep2x = NSImageRep(contentsOf: url2x) {
             image.addRepresentation(rep2x)
         }

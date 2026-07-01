@@ -8,7 +8,12 @@ let package = Package(
         .executableTarget(
             name: "hee-button",
             path: "Sources/hee-button",
-            resources: [.process("Resources")]
+            // Resources are copied straight into the assembled app's
+            // Contents/Resources by Scripts/build-app.sh and loaded via
+            // Bundle.main — not via SwiftPM's Bundle.module (which resolves
+            // relative to the executable's dir and breaks once relocated
+            // into a .app). Excluded here so SwiftPM ignores them.
+            exclude: ["Resources"]
         )
     ]
 )
