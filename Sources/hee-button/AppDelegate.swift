@@ -11,7 +11,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private static let iconKey = "iconChoice"
     private static let volumeKey = "volumeLevel" // 1...10
 
-    private var iconChoice: IconChoice = .button
+    private var iconChoice: IconChoice = .simpleBlue
     private var volumeLevel = 10 // 1...10, applied as volume = level / 10
 
     func applicationDidFinishLaunching(_ notification: Notification) {
