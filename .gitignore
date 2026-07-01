@@ -12,7 +12,6 @@ Package.resolved
 # Source input originals (high-res, carry C2PA / where-from metadata).
 # The build ships the cleaned resized copies under Sources/hee-button/Resources/.
 /original-images/
-/he-.mp3
 
 # Internal implementation planning (kept local, not published)
 docs/
