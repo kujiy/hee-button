@@ -28,7 +28,11 @@ sed "s/__VERSION__/$VERSION/g" Info.plist.template > "$APP/Contents/Info.plist"
 printf 'APPL????' > "$APP/Contents/PkgInfo"
 
 # App resources (menu-bar icons + sound), loaded via Bundle.main.
-cp Sources/hee-button/Resources/*.png "$APP/Contents/Resources/"
+# Only the icons the app actually uses — not README assets like hero.png.
+for icon in button he-simple hee-simple-blue; do
+    cp "Sources/hee-button/Resources/$icon.png" "$APP/Contents/Resources/"
+    cp "Sources/hee-button/Resources/$icon@2x.png" "$APP/Contents/Resources/"
+done
 cp Sources/hee-button/Resources/he-.mp3 "$APP/Contents/Resources/"
 # Finder / bundle icon.
 cp packaging/AppIcon.icns "$APP/Contents/Resources/AppIcon.icns"

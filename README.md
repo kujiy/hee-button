@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Sources/hee-button/Resources/hero.png" alt="HeeButton in the menu bar" width="480">
+</p>
+
 # HeeButton
 
 A tiny macOS menu bar app. Click the menu bar icon to play a sound (`he-.mp3`). That's it.
