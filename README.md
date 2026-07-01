@@ -10,6 +10,14 @@ A tiny macOS menu bar app. Click the menu bar icon to play a sound (`he-.mp3`). 
 - Icon and volume choices persist across launches (`UserDefaults`)
 - Lives only in the menu bar (no Dock icon)
 
+## Icons
+
+Pick one from the right-click **Icon** menu:
+
+| <img src="Sources/hee-button/Resources/hee-simple-blue@2x.png" width="36" height="36" alt="Simple Blue"> | <img src="Sources/hee-button/Resources/he-simple@2x.png" width="36" height="36" alt="Simple"> | <img src="Sources/hee-button/Resources/button@2x.png" width="36" height="36" alt="Button"> |
+|:--:|:--:|:--:|
+| Simple Blue (default) | Simple | Button (original) |
+
 ## Install
 
 ```sh
